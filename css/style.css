@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.a {
+    text-decoration: none;
+}
+
+.tabs img {
+    width: 300px;
+    height: 300px;
+    border: 2px solid black;
+    object-fit: contain;
+    animation: img 1.5s alternate;
+}
+
+@keyframes img {
+    0% {
+        opacity: 0;
+        transform: scale(0) ;
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+}
+
+}
+
+.tabs input {
+    display: none;
+}
+
+#tiger:checked ~ .elephant ,
+#tiger:checked ~ .dog {
+    opacity: .3;
+    transition: .4s;
+    transform: scale(0.8);
+}
+
+#elephant:checked ~ .tiger,
+#elephant:checked ~ .dog {
+    opacity: .3;
+    transition: .4s;
+    transform: scale(0.8);
+
+}
+
+#dog:checked ~ .tiger,
+#dog:checked ~ .elephant {
+    opacity: .3;
+    transition: .4s;
+    transform: scale(0.8);
+}
+
+
+.group  {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.group label {
+    padding: 10px 30px;
+    background: black;
+    color: white;
+    border-radius: 15px;
+    border: 2px solid red;
+    font-family: sans-serif;
+    cursor: pointer;
+    transition: .4s;
+    animation: ani .1s alternate;
+}
+
+@keyframes ani {
+    0% {
+        transform: translateY(-500px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+
+}
+
+.group label:hover {
+    background: transparent;
+    color: white;
+    transform: scale(1.1) ;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-evenly;
+    background: linear-gradient(45deg, red, blue,red );
+    padding: 50px 0;
+    border-radius: 15px;
+}
+
+#hero {
+    background: blue;
+    min-height: 100vh ;
+}
